@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import{faArrowRight} from '@fortawesome/free-solid-svg-icons'
 import { FirebaseService } from 'src/app/services/firebase.service';
 
@@ -8,13 +9,25 @@ import { FirebaseService } from 'src/app/services/firebase.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  faArrowRight=faArrowRight;
-  constructor(public sFireBase : FirebaseService){}
+  constructor(private sFireBase : FirebaseService){}
   ngOnInit() {
+
   }
+  reactiveLogInForm = new FormGroup(
+    {
+      emailFireBase : new FormControl(null),
+      passwordFireBase : new FormControl(null),
+    }
+    );
+  faArrowRight=faArrowRight;
+ 
+
+
+  
+
   uLogIn()
   {
-    this.sFireBase.sLogIn('admin@gmail.com','admin@2023');
+    this.sFireBase.sSignIn(`${this.reactiveLogInForm.value['emailFireBase']}`,`${this.reactiveLogInForm.value['passwordFireBase']}`);
   }
   uLogOut()
   {

@@ -1,22 +1,21 @@
 <section id="content" class="mb-3">
     <section style="max-width: 600px;" class="login-form mx-auto mt-5">
-        <form id="login-form" action="#" method="post">
+        <form [formGroup]="reactiveLogInForm"   (ngSubmit)="uLogIn()">
             <section>
-                <input type="hidden" name="back" value="my-account">
+                
                 <div class="form-group email w-100">
                     <span class="hide_error"><i class=""></i></span>
                     <div class="form-floating mb-3 ">
-                        <input name="email" type="email" class="form-control border border-dark" id="floatingEmail"
-                            placeholder="name@example.com" required style="outline: none;">
+                        <input id="floatingEmail"  type="email" class="form-control border border-dark" 
+                            placeholder="name@example.com"  formControlName="emailFireBase">
                         <label for="floatingEmail">E-mail <span class="text-danger"
                                 style="outline: none;">*</span></label>
                     </div>
                 </div>
                 <div class="form-group password w-100">
-                    <span class="hide_error"><i class=""></i></span>
                     <div class="form-floating">
-                        <input name="password" type="password" class="form-control border border-dark"
-                            id="floatingPassword" placeholder="Password" autocomplete="off" required="" value="">
+                        <input id="floatingPassword"  type="password" class="form-control border border-dark"
+                            placeholder="Password" autocomplete="off" value="" formControlName="passwordFireBase">
                         <label for="floatingPassword">Mot de passse <span class="text-danger">*</span></label>
                     </div>
                 </div>
@@ -31,7 +30,7 @@
                     <div class="col-lg-4 col-sm-12" >
                         <input type="hidden" name="submitLogin" value="1">
                         <button id="submit-login" class="btn btn-dark btn-lg w-100 d-flex justify-content-between align-items-center"
-                            type="submit" (click)="uLogIn()">
+                            type="submit">
                             <span> Connexion </span>
                             <fa-icon [icon]="faArrowRight"></fa-icon>
                         </button>

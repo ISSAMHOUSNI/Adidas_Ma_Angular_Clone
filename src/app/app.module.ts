@@ -15,6 +15,7 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
 
 import{AngularFireModule} from '@angular/fire/compat';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import{AngularFireModule} from '@angular/fire/compat';
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
     provideFirestore(() => getFirestore()),
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

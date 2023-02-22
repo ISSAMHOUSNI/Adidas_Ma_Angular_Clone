@@ -2,7 +2,7 @@
     <section style="max-width: 600px;" class="register-form mx-auto mt-5">
         <p class="aLinks">Vous avez déjà un compte ? <a href="./login.html">Connectez-vous !</a>
         </p>
-        <form action="#" id="customer-form" class="js-customer-form" method="post">
+        <form  class="js-customer-form" method="post" [formGroup]="reactiveSignUpForm" (ngSubmit)="uCreate()">
             <section>
                 <div class="form-group radio-buttons ">
                     <span class="hide_error"><i class=""></i></span>
@@ -39,7 +39,7 @@
                     <span class="hide_error"><i class=""></i></span>
                     <div class="form-floating mb-3">
                         <input name="email" type="email" value="" class="form-control border border-dark"
-                            id="floatingEmail" placeholder="E-mail" required>
+                            id="floatingEmail" placeholder="E-mail" required formControlName="emailFireBase">
                         <label for="floatingEmail">E-mail <span class="text-danger">*</span></label>
                     </div>
                 </div>
@@ -48,7 +48,7 @@
                     <div class="form-floating mb-3">
                         <input name="password" type="password" class="form-control border border-dark"
                             id="floatingPassword" placeholder="Mot de passe" autocomplete="off" required=""
-                            value="">
+                            value="" formControlName="passwordFireBase">
                         <label for="floatingPassword">Mot de passe</label>
                     </div>
                 </div>
@@ -104,7 +104,7 @@
                 <input type="hidden" name="submitCreate" value="1">
 
                 <button class="btn btn-dark py-3 w-100 text-start" data-link-action="save-customer"
-                    type="submit" (click)="uCreate()">
+                    type="submit">
                     ENREGISTRER
                 </button>
             </footer>

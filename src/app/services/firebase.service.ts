@@ -6,21 +6,21 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 })
 export class FirebaseService {
   constructor(private sFirebase: AngularFireAuth) {}
-  sLogIn(email: string, password: string) {
+  sSignIn(email: string, password: string) {
     this.sFirebase.signInWithEmailAndPassword(email, password).then(
       (res) => {
         localStorage.setItem('tokenUSER', 'true');
-        console.log(`USER ADD ${res}`);
+        console.log(`USER LOGIN ${res}`);
       },
       (err) => {
         alert('FAILD ADD USER ERR');
       }
     );
   }
-  sCreateUser(email: string, password: string) {
+  sSignUp(email: string, password: string) {
     this.sFirebase.createUserWithEmailAndPassword(email, password).then(
       (res) => {
-        console.log(`CREATE USER ${res}`);
+        console.log(`USER SIGNUP ${res}`);
         localStorage.setItem('tokenUSER', 'true');
       },
       (err) => {
@@ -39,8 +39,16 @@ export class FirebaseService {
       }
     );
   }
-  sForgotPassword()
+  sForgotPassword(email : string)
   {
-    
+    this.sFirebase.sendPasswordResetEmail(email).then(
+      (res) => {
+        console.log(`USER FORGOT PASS ${res}`);
+        localStorage.setItem('FORGOTP_ASS', 'true');
+      },
+      (err) => {
+        alert('USER FORGOT PASS ERR');
+      }
+    );
   }
 }
