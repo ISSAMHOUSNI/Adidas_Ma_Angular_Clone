@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './authentification/login/login.component';
 import { RegisterComponent } from './authentification/register/register.component';
 import { ForgotpasswordComponent } from './authentification/forgotpassword/forgotpassword.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
@@ -20,6 +21,7 @@ import { ForgotpasswordComponent } from './authentification/forgotpassword/forgo
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
