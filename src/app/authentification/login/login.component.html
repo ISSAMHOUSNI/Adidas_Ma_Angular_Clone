@@ -31,7 +31,7 @@
                     <div class="col-lg-4 col-sm-12" >
                         <input type="hidden" name="submitLogin" value="1">
                         <button id="submit-login" class="btn btn-dark btn-lg w-100 d-flex justify-content-between align-items-center"
-                            type="submit">
+                            type="submit" (click)="uLogIn()">
                             <span> Connexion </span>
                             <fa-icon [icon]="faArrowRight"></fa-icon>
                         </button>
@@ -41,6 +41,8 @@
                         <a href="./register.html" target="_blank" class="text-dark w-100">
                             Pas de compte ? Créez-en un
                         </a>
+
+                        <button (click)="uLogOut()">Log Out</button>
                     </div>
             
             </footer>

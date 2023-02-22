@@ -11,6 +11,14 @@ export class LoginComponent implements OnInit {
   faArrowRight=faArrowRight;
   constructor(public sFireBase : FirebaseService){}
   ngOnInit() {
-    this.sFireBase.ontest();
   }
+  uLogIn()
+  {
+    this.sFireBase.sLogIn('admin@gmail.com','admin@2023');
+  }
+  uLogOut()
+  {
+    this.sFireBase.sSignOut();
+  }
+ 
 }
