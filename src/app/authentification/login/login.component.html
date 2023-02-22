@@ -1,1 +1,51 @@
-<p>login Component Will Be Soon.... !</p>
+<section id="content" class="mb-3">
+    <section style="max-width: 600px;" class="login-form mx-auto mt-5">
+        <form id="login-form" action="#" method="post">
+            <section>
+                <input type="hidden" name="back" value="my-account">
+                <div class="form-group email w-100">
+                    <span class="hide_error"><i class=""></i></span>
+                    <div class="form-floating mb-3 ">
+                        <input name="email" type="email" class="form-control border border-dark" id="floatingEmail"
+                            placeholder="name@example.com" required style="outline: none;">
+                        <label for="floatingEmail">E-mail <span class="text-danger"
+                                style="outline: none;">*</span></label>
+                    </div>
+                </div>
+                <div class="form-group password w-100">
+                    <span class="hide_error"><i class=""></i></span>
+                    <div class="form-floating">
+                        <input name="password" type="password" class="form-control border border-dark"
+                            id="floatingPassword" placeholder="Password" autocomplete="off" required="" value="">
+                        <label for="floatingPassword">Mot de passse <span class="text-danger">*</span></label>
+                    </div>
+                </div>
+                <div class="forgot-password mb-3 aLinks">
+                    <a href="./forgotpassword.html">
+                        Mot de passe oublié ?
+                    </a>
+                </div>
+            </section>
+            <footer class="row" >
+                
+                    <div class="col-lg-4 col-sm-12" >
+                        <input type="hidden" name="submitLogin" value="1">
+                        <button id="submit-login" class="btn btn-dark btn-lg w-100 d-flex justify-content-between align-items-center"
+                            type="submit">
+                            <span> Connexion </span>
+                            <i class="fa-solid fa-arrow-right "></i>
+                            
+                        </button>
+                    </div>
+
+                    <div class="col-lg-7 col-sm-12 border border-dark py-2 mt-2">
+                        <a href="./register.html" target="_blank" class="text-dark w-100">
+                            Pas de compte ? Créez-en un
+                        </a>
+                    </div>
+            
+            </footer>
+
+        </form>
+    </section>
+</section>

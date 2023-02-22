@@ -1,1 +1,113 @@
-<p>register works!</p>
+<section id="content" class="page-content ">
+    <section style="max-width: 600px;" class="register-form mx-auto mt-5">
+        <p class="aLinks">Vous avez déjà un compte ? <a href="./login.html">Connectez-vous !</a>
+        </p>
+        <form action="#" id="customer-form" class="js-customer-form" method="post">
+            <section>
+                <div class="form-group radio-buttons ">
+                    <span class="hide_error"><i class=""></i></span>
+
+                    <label class="col-md-3 form-control-label d-block ">
+                        Titre
+                    </label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="id_gender" id="inlineRadio1" value="1">
+                        <label class="form-check-label" for="inlineRadio1">M</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="id_gender" id="inlineRadio2" value="2">
+                        <label class="form-check-label" for="inlineRadio2">Mme</label>
+                    </div>
+                </div>
+                <div class="form-group text ">
+                    <span class="hide_error"><i class=""></i></span>
+                    <div class="form-floating mb-3">
+                        <input name="firstname" type="text" class="form-control border border-dark"
+                            id="floatingPrenom" placeholder="Prénom" required>
+                        <label for="floatingPrenom">Prénom <span class="text-danger">*</span></label>
+                    </div>
+                </div>
+                <div class="form-group text ">
+                    <span class="hide_error"><i class=""></i></span>
+                    <div class="form-floating mb-3">
+                        <input name="lastname" type="text" class="form-control border border-dark" id="floatingNom"
+                            placeholder="Nom" required>
+                        <label for="floatingNom">Nom <span class="text-danger">*</span></label>
+                    </div>
+                </div>
+                <div class="form-group email ">
+                    <span class="hide_error"><i class=""></i></span>
+                    <div class="form-floating mb-3">
+                        <input name="email" type="email" value="" class="form-control border border-dark"
+                            id="floatingEmail" placeholder="E-mail" required>
+                        <label for="floatingEmail">E-mail <span class="text-danger">*</span></label>
+                    </div>
+                </div>
+                <div class="form-group password ">
+                    <span class="hide_error"><i class=""></i></span>
+                    <div class="form-floating mb-3">
+                        <input name="password" type="password" class="form-control border border-dark"
+                            id="floatingPassword" placeholder="Mot de passe" autocomplete="off" required=""
+                            value="">
+                        <label for="floatingPassword">Mot de passe</label>
+                    </div>
+                </div>
+                <div class="form-group text ">
+                    <span class="hide_error"><i class=""></i></span>
+                    <div class="form-floating mb-3">
+                        <input name="birthday" type="date" value="" class="form-control border border-dark"
+                            id="floatingDate" placeholder="DD/MM/YYYY">
+                        <label for="floatingDate">Date de naissance </label>
+                    </div>
+                </div>
+                <div class="form-group checkbox ">
+                    <span class="hide_error"><i class=""></i></span>
+                    
+                    
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" name="optin" type="checkbox" value="1" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                            Recevoir les offres de nos partenaires
+                        </label>
+                    </div>
+
+
+
+                </div>
+                <div class="form-group checkbox ">
+                    <span class="hide_error"><i class=""></i></span>
+
+                    <div class="form-check">
+                        <input class="form-check-input" name="newsletter" type="checkbox" value="2" id="defaultCheck2">
+                        <label class="form-check-label" for="defaultCheck2">
+                            Recevoir notre newsletter<br><em>Vous pouvez vous désinscrire à tout moment. Vous
+                                trouverez pour cela nos informations de contact dans les conditions
+                                d'utilisation du site.</em>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group checkbox my-3 ">
+                    <span class="hide_error"><i class=""></i></span>
+                    <div class="form-check">
+                        <input class="form-check-input" name="psgdpr" type="checkbox" value="3" id="defaultCheck3">
+                        <label class="form-check-label aLinks" for="defaultCheck3">
+                            J'accepte <a href="/content/82-conditions-generales-de-vente" target="_blank"
+                            rel="noreferrer noopener">les conditions générales </a>et <a
+                            href="/content/10-avis-de-confidentialite" target="_blank"
+                            rel="noreferrer noopener">la politique de confidentialité</a>
+                        </label>
+                    </div>
+                </div>
+            </section>
+            <footer class="form-footer clearfix">
+                <input type="hidden" name="submitCreate" value="1">
+
+                <button class="btn btn-dark py-3 w-100 text-start" data-link-action="save-customer"
+                    type="submit">
+                    ENREGISTRER
+                </button>
+            </footer>
+        </form>
+    </section>
+</section>
