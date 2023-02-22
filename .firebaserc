@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "adidasmaclone": {
+      "hosting": {
+        "adidas_ma_clone": [
+          "adidasmaclone"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "adidasmaclone"
+  }
+}
