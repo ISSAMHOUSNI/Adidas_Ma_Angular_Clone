@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { FirebaseService } from 'src/app/services/firebase.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { FirebaseService } from 'src/app/services/firebase.service';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-  constructor(public sFireBase : FirebaseService){}
+  constructor(public sFireBase : FirebaseService,private sRoute:Router){}
   reactiveSignUpForm = new FormGroup(
     {
       emailFireBase : new FormControl(null),
@@ -20,5 +21,9 @@ export class RegisterComponent implements OnInit {
   uCreate()
   {
     this.sFireBase.sSignUp(`${this.reactiveSignUpForm.value['emailFireBase']}`,`${this.reactiveSignUpForm.value['passwordFireBase']}`);
+    console.log("---------------------------- uCreate Done ----------------------------");
+    this.sRoute.navigate([['/', 'EmailVerification']]);
+
+    
   }
 }

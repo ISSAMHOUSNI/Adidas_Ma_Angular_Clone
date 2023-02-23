@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 // import{faAndroid} from '@fortawesome/free-brands-svg-icons'
 // import{faArrowAltCircleLeft} from '@fortawesome/free-regular-svg-icons'
 import{faChevronLeft} from '@fortawesome/free-solid-svg-icons'
@@ -18,10 +19,13 @@ export class ForgotpasswordComponent {
     }
     );
   
-  constructor(public sFireBase : FirebaseService){}
+  constructor(public sFireBase : FirebaseService,private sRoute:Router){}
   uForgotPassword()
   {
     this.sFireBase.sForgotPassword(`${this.reactiveForgotPasswordForm.value['emailFireBase']}`);
+    console.log("---------------------------- uForgotPassword() Done ----------------------------");
+    this.sRoute.navigate([['/', 'SignIn']]);
   }
+
   
 }

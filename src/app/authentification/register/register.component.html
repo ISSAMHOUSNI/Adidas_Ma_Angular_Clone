@@ -1,6 +1,6 @@
 <section id="content" class="page-content ">
     <section style="max-width: 600px;" class="register-form mx-auto mt-5">
-        <p class="aLinks">Vous avez déjà un compte ? <a href="./login.html">Connectez-vous !</a>
+        <p class="aLinks">Vous avez déjà un compte ? <a [routerLink]="['/SignIn']">Connectez-vous !</a>
         </p>
         <form  class="js-customer-form" method="post" [formGroup]="reactiveSignUpForm" (ngSubmit)="uCreate()">
             <section>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import{faArrowRight} from '@fortawesome/free-solid-svg-icons'
+import { Router } from '@angular/router';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { FirebaseService } from 'src/app/services/firebase.service';
 
 @Component({
@@ -9,7 +10,8 @@ import { FirebaseService } from 'src/app/services/firebase.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  constructor(private sFireBase : FirebaseService){}
+  faArrowRight=faArrowRight;
+  constructor(private sFireBase : FirebaseService, private sRoute:Router){}
   ngOnInit() {
 
   }
@@ -19,19 +21,20 @@ export class LoginComponent implements OnInit {
       passwordFireBase : new FormControl(null),
     }
     );
-  faArrowRight=faArrowRight;
- 
-
-
-  
-
   uLogIn()
   {
     this.sFireBase.sSignIn(`${this.reactiveLogInForm.value['emailFireBase']}`,`${this.reactiveLogInForm.value['passwordFireBase']}`);
+    console.log("---------------------------- uLogIn Done ----------------------------");
+    this.sRoute.navigate([['/', 'EmailVerification']]);
   }
   uLogOut()
   {
     this.sFireBase.sSignOut();
+    console.log("---------------------------- uLogOut Done ----------------------------");
+    console.log("---------------------------- Return To Home Done ----------------------------");
+    // this.sRoute.navigate([['/', 'SignIn']]);
+
+    
   }
  
 }

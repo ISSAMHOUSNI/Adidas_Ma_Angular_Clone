@@ -16,6 +16,7 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
 import{AngularFireModule} from '@angular/fire/compat';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EmailverifivationComponent } from './authentification/emailverifivation/emailverifivation.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    ForgotpasswordComponent
+    ForgotpasswordComponent,
+    EmailverifivationComponent
   ],
   imports: [
     BrowserModule,

@@ -51,4 +51,16 @@ export class FirebaseService {
       }
     );
   }
+  sEmailVerification(email : string)
+  {
+    this.sFirebase.sendPasswordResetEmail(email).then(
+      (res) => {
+        console.log(`USER Email Verification ${res}`);
+        localStorage.setItem('EmailVerification', 'true');
+      },
+      (err) => {
+        alert('USER Email Verification ERR');
+      }
+    );
+  }
 }
