@@ -10,7 +10,7 @@ export class EmailverifivationComponent implements OnInit {
   constructor(private sRoute:Router){}
 ngOnInit(): void {
   setTimeout(() => {
-    this.sRoute.navigate(['/', 'SignIn']).then(
+    this.sRoute.navigate(['/auth', 'SignIn']).then(
       ()=>
       {
         console.log("---------------------------- Redirect To SignIn  ----------------------------");

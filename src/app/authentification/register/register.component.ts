@@ -22,7 +22,7 @@ export class RegisterComponent implements OnInit {
   {
     this.sFireBase.sSignUp(`${this.reactiveSignUpForm.value['emailFireBase']}`,`${this.reactiveSignUpForm.value['passwordFireBase']}`);
     console.log("---------------------------- uCreate Done ----------------------------");
-    this.sRoute.navigate(['/', 'EmailVerification']).then(
+    this.sRoute.navigate(['/auth', 'EmailVerification']).then(
       ()=>
       {
         console.log("---------------------------- Redirect To EmailVerification  ----------------------------");

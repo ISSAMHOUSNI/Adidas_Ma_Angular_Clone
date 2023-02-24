@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
     this.sFireBase.sSignOut();
     console.log("---------------------------- uLogOut Done ----------------------------");
     console.log("---------------------------- Return To Home Done ----------------------------");
-    this.sRoute.navigate(['/', 'SignIn']).then(
+    this.sRoute.navigate(['/auth', 'SignIn']).then(
       ()=>
       {
         console.log("---------------------------- Redirect To SignIn  ----------------------------");
