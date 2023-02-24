@@ -9,7 +9,7 @@ export class FirebaseService {
   sSignIn(email: string, password: string) {
     this.sFirebase.signInWithEmailAndPassword(email, password).then(
       (res) => {
-        localStorage.setItem('tokenUSER', 'true');
+        localStorage.setItem('userEmail',`${email}`);
         console.log(`USER LOGIN ${res}`);
       },
       (err) => {

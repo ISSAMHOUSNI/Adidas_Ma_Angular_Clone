@@ -24,7 +24,18 @@ export class ForgotpasswordComponent {
   {
     this.sFireBase.sForgotPassword(`${this.reactiveForgotPasswordForm.value['emailFireBase']}`);
     console.log("---------------------------- uForgotPassword() Done ----------------------------");
-    this.sRoute.navigate([['/', 'SignIn']]);
+    setTimeout(() => {
+      this.sRoute.navigate(['/', 'SignIn']).then(
+        ()=>
+        {
+          console.log("---------------------------- Redirect To SignIn  ----------------------------");
+        },err =>
+        {
+          console.log("---------------------------- ERROR NAVIGATE  ----------------------------");
+        }
+        );
+    }, 3000);
+    
   }
 
   
