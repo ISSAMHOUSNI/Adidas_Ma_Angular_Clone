@@ -25,33 +25,17 @@ export class LoginComponent implements OnInit {
   {
     this.sFireBase.sSignIn(`${this.reactiveLogInForm.value['emailFireBase']}`,`${this.reactiveLogInForm.value['passwordFireBase']}`);
     console.log("---------------------------- uLogIn Done ----------------------------");
-    // this.sRoute.navigate(['/', 'HOME']).then(
-    //   ()=>
-    //   {
-    //     console.log("---------------------------- Redirect To EmailVerification  ----------------------------");
-    //   },err =>
-    //   {
-    //     console.log("---------------------------- ERROR NAVIGATE  ----------------------------");
-    //   }
-    //   );
-    
-  }
-  uLogOut()
-  {
-    this.sFireBase.sSignOut();
-    console.log("---------------------------- uLogOut Done ----------------------------");
-    console.log("---------------------------- Return To Home Done ----------------------------");
-    this.sRoute.navigate(['/auth', 'SignIn']).then(
+    this.sRoute.navigate(['/', 'home']).then(
       ()=>
       {
-        console.log("---------------------------- Redirect To SignIn  ----------------------------");
+        console.log("---------------------------- Redirect To HOME  ----------------------------");
       },err =>
       {
         console.log("---------------------------- ERROR NAVIGATE  ----------------------------");
       }
       );
-
     
   }
+  
  
 }
