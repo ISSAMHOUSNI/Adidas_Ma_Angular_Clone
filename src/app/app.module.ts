@@ -18,6 +18,9 @@ import { AuthComponent } from './authentification/auth.component';
 import { AuthModule } from './authentification/auth.module';
 import { NotFoundComponent } from './erreurPages/not-found/not-found.component';
 import { HomeComponent } from './pages/home/home.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { InternalServerErrorComponent } from './erreurPages/internal-server-error/internal-server-error.component';
 
 
 @NgModule({
@@ -25,19 +28,22 @@ import { HomeComponent } from './pages/home/home.component';
     AppComponent,
     AuthComponent,
     NotFoundComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderComponent,
+    FooterComponent,
+    InternalServerErrorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
     ReactiveFormsModule,
-    
+    AngularFireModule.initializeApp(environment.firebase),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
     provideFirestore(() => getFirestore()),
-    AngularFireModule.initializeApp(environment.firebase),  
+     
   ],
   providers: [],
   bootstrap: [AppComponent]
