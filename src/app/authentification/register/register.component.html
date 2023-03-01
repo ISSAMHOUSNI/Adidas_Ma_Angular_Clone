@@ -1,6 +1,6 @@
 <section id="content" class="page-content ">
     <section style="max-width: 600px;" class="register-form mx-auto mt-5">
-        <p class="aLinks">Vous avez déjà un compte ? <a [routerLink]="['/auth','SignIn']">Connectez-vous !</a>
+        <p class="aLinks-Black">Vous avez déjà un compte ? <a [routerLink]="['/auth','SignIn']">Connectez-vous !</a>
         </p>
         <form  class="js-customer-form" method="post" [formGroup]="reactiveSignUpForm" (ngSubmit)="uCreate()">
             <section>
@@ -91,7 +91,7 @@
                     <span class="hide_error"><i class=""></i></span>
                     <div class="form-check">
                         <input class="form-check-input" name="psgdpr" type="checkbox" value="3" id="defaultCheck3">
-                        <label class="form-check-label aLinks" for="defaultCheck3">
+                        <label class="form-check-label aLinks-Black" for="defaultCheck3">
                             J'accepte <a href="/content/82-conditions-generales-de-vente" target="_blank"
                             rel="noreferrer noopener">les conditions générales </a>et <a
                             href="/content/10-avis-de-confidentialite" target="_blank"

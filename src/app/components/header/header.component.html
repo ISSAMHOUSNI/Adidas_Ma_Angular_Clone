@@ -1,1 +1,141 @@
-<p>header works!</p>
+<!-- BEGIN HEADER BANNER -->
+<div style="background-color: rgb(237, 231, 52);word-spacing: 1px;"
+  class="fw-bold text-uppercase px-5 fs-6 lh-base text-center">
+  <div class="container">
+    Profitez de 20% de réduction sur tous les articles en utilisant le code ‟WELCOMEADI”
+  </div>
+</div>
+<!-- END HEADER BANNER -->
+<!-- BEGIN top-marketing-custom -->
+<div class="top-marketing-custom-pc d-none  d-lg-block ">
+
+  <div class="bg-dark d-flex align-items-center text-center ">
+    <div class="col-md-4">
+      <span class="aLinks-White">
+        <a href="#"> <fa-icon [icon]="faTruckFast" class="pe-2" ></fa-icon> LIVRAISON GRATUITE </a></span>
+    </div>
+    <div class="col-md-4">
+      <span class="aLinks-White">
+        <a href="#"><fa-icon [icon]="faTicket" class="pe-2" ></fa-icon> Retours pendant 14 jours </a></span>
+    </div>
+    <div class="col-md-4">
+      <span class="aLinks-White">
+        <a href="#"><fa-icon [icon]="faMoneyBill" class="pe-2" ></fa-icon> Paiement cash disponible </a></span>
+    </div>
+  </div>
+</div>
+<div class="top-marketing-custom-mobile d-lg-none"> 
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner bg-dark text-center">
+    <div class="carousel-item active">
+      <span class="aLinks-White">
+        <a href="#"> <fa-icon [icon]="faTruckFast" class="pe-2" ></fa-icon> LIVRAISON GRATUITE </a></span>
+    </div>
+    <div class="carousel-item">
+
+      <span class="aLinks-White">
+        <a href="#"><fa-icon [icon]="faTicket" class="pe-2" ></fa-icon> Retours pendant 14 jours </a></span>
+    </div>
+    <div class="carousel-item">
+      <span class="aLinks-White">
+        <a href="#"><fa-icon [icon]="faMoneyBill" class="pe-2" ></fa-icon> Paiement cash disponible </a></span>
+    </div>
+  </div>
+</div>
+</div>
+  <!-- END top-marketing-custom -->
+<!-- Begin HEADER -->
+  <div class="header-top d-none d-lg-block">
+    <div class="container-fluid px-5">
+      <div class="row">
+        <div class="col-md-2" id="_desktop_logo">
+          <h1 class="m-0 mt-2">
+            <a [routerLink]="['','/']">
+              <img class="logo img-responsive" width="70" height="44" src="../../assets/images/adidasma-logo-1652397670.jpg"
+                alt="Adidas.ma">
+            </a>
+          </h1>
+        </div>
+        <div class="col-md-10 col-sm-12 ">
+          <div class="top-bar hidden-md-down d-flex justify-content-end fs-6">
+            <div class="aLinks-Black-u-none mx-2"><a href="#">aide</a></div>
+            <div class="aLinks-Black-u-none mx-2"><a href="#">échanges & retours</a></div>
+            <div class="aLinks-Black-u-none mx-2"><a href="#">statut de la commande</a></div>
+            <div class="aLinks-Black-u-none mx-2"><a class="show_newsletter" href="#" data-toggle="modal"
+                data-target="#myModal">inscription à la newsletter</a></div>
+
+            <div id="_desktop_user_info">
+              <div class="user-info">
+                <div class="load_link" data-link="mon-compte.html" title="Identifiez-vous">
+                  <div class="aLinks-Black-u-none mx-2"><a   [routerLink]="['/auth','SignIn']">Connexion</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ---------------------------------------------------------------------------- -->
+          <div class="menu-pimary">
+
+            <div class="d-flex align-items-center justify-content-around" id="_desktop_top_menu">
+              <ul class="d-flex justify-content-center  m-0" style="list-style: none;">
+                <li class="px-2 py-3 "><a class="link-dark bold" href="/s/111/hommes">Hommes</a></li>
+                <li class="p-2 py-3"><a class="link-dark  bold" href="/s/112/femmes">Femmes</a></li>
+                <li class="p-2 py-3"><a class="link-dark  bold" href="/s/219/enfants">Enfants</a></li>
+                <li class="p-2 py-3"><a class="link-dark " href="#">Sports</a></li>
+                <li class="p-2 py-3"><a class="link-dark " href="/collections">Collections</a></li>
+                <li class="p-2 py-3" style="background-color: red;">
+                  <!-- <a class="link-primary" href="/s/92/promos">Promos</a> -->
+                  <a class="link-light bold" href="/promotions">Soldes jusqu'à 50 %</a>
+                </li>
+              </ul>
+
+              <!-- Block search module TOP -->
+              <div id="search_widget" class="--search-widget d-flex" data-search-controller-url="">
+                <form class="d-flex position-relative" role="search">
+                  <input class="form-control " type="search" placeholder="Rechercher" aria-label="Search" class="bg-light">
+                  <button style="background-color: transparent; border-color: transparent;" type="submit" class=" position-absolute bottom-0 end-0">
+                    <fa-icon [icon]="faMagnifyingGlass"></fa-icon>
+                  </button>
+                </form>
+            
+
+                <div id="_desktop_wishlist" class="ms-1 d-flex">
+                  <a [routerLink]="['/auth','SignIn']"  class="px-2">
+                    <img src="https://adidas.co.ma/icons/profile.svg" width="24" height="24">
+                  </a>
+                  <a href="#" class="px-2">
+                    <img src="https://adidas.co.ma/icons/wishlist-inactive.svg" width="24" height="29">
+                  </a>
+                  </div>
+
+                  <div id="_desktop_cart" class="px-2">
+                    <div class="blockcart cart-preview inactive"
+                      data-refresh-url="//adidas.co.ma/module/ps_shoppingcart/ajax">
+                      <div class="header">
+    
+                        <img src="../../assets/icons/bag-inactive.svg" width="24" height="24">
+                        <span class="cart-products-count bg-primary rounded-circle" width="24" height="24" >0</span>
+                      </div>
+                    </div>
+    
+                  </div>
+
+                </div>
+
+              </div> 
+              <!-- /Block search module TOP -->
+              
+            </div>
+
+
+
+
+
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+<!-- END HEADER -->
